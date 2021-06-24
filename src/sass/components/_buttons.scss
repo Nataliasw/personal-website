@@ -1,0 +1,114 @@
+.btn {
+
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 20rem;
+    transition: all .2s;
+    position: relative;
+    font-size: 1.6rem;
+
+
+    //change for the button element
+    border: none;
+    cursor: pointer;
+
+  }
+
+
+
+  &:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+
+    }
+  }
+
+  &:active &:focus {
+    outline: none;
+    transform: translateY(-0.1rem);
+    box-shadow: 0 .5rem 1rem rgba($color-black, 0.2);
+  }
+
+  &--white {
+    background-color: $color-white;
+    color: $color-secondary-dark;
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 20rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+}
+
+.about {
+
+  &__icon {
+    font-size: 13rem;
+    text-shadow: .3rem .3rem 0 rgba($color-grey-1, 0.6);
+    animation: jump--2 500ms infinite ease-out alternate;
+
+    &--1 {
+      position: absolute;
+      top: 7%;
+      right: 7%;
+    }
+
+    &--2 {
+      position: absolute;
+      top: 100%;
+      right: 10.5%;
+    }
+
+  }
+
+
+  &__button {
+
+    &,
+    &:link,
+    &:visited {
+      margin-top: 3rem;
+      display: inline-block;
+      font-size: 3rem;
+      text-decoration: none;
+      color: $color-primary;
+      background-color: $color-secondary-dark;
+      padding: 1rem 2rem;
+      text-shadow: 1px 1px $color-grey-1, -1px -1px $color-grey-2;
+      border-radius: 1rem;
+      box-shadow: 1rem 1rem $color-black;
+      transition: all .4s;
+
+      &:hover {
+        transform: translateY(-.8rem);
+        background-color: $color-secondary-light;
+      }
+
+      &:active {
+        transform: translateY(1rem);
+      }
+    }
+
+  }
+}

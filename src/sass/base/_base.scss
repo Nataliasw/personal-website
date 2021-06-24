@@ -1,0 +1,42 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+
+}
+
+html {
+  font-size: 62.5%; //1rem = 10px
+
+}
+
+body {
+  box-sizing: border-box;
+  background-color: $color-primary;
+
+
+}
+
+.section {
+  &--1 {
+    position: relative;
+    height: 100vh;
+  }
+
+  &--2 {
+    position: relative;
+    height: 90vh;
+  }
+   &--3 {
+    position: relative;
+    height: 90vh;
+  }
+}
+
+::selection {
+  background-color: $color-secondary-light;
+  color: $color-white;
+
+}

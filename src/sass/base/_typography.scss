@@ -1,0 +1,61 @@
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  color: $color-white;
+  line-height: 1.7;
+
+}
+
+.heading {
+  &__projects {
+    font-family: "Press Start 2P";
+    font-size: 8rem;
+    margin-bottom: 3rem;
+    margin-left: 1.5rem;
+    text-shadow: .13em .13em 0 $color-secondary-dark-3;
+    letter-spacing: .5rem;
+    
+
+    &--letter {
+      transition: color .3s;
+      &:hover {
+        color: hotpink;
+        cursor: pointer;
+      }
+    }
+
+  }
+
+
+}
+
+.about {
+  &__container {
+    position: relative;
+    top: 15%;
+    left: 6%;
+    font-size: 8rem;
+    font-family: "Press Start 2P";
+  }
+
+  &__name {
+    display: inline-block;
+    color: $color-secondary-dark-3;
+    text-shadow: .13em .13em 0 rgba($color-white, 0.6);
+    // animation: jump--2 500ms infinite ease-out alternate;
+transition: all .3s;
+    &:hover {
+      color: $color-secondary-light;
+      cursor: pointer;
+    }
+
+    @for $i from 0 to 10 {
+      &:nth-of-type(#{$i}) {
+        animation-delay: 500ms + 200ms * $i;
+      }
+    }
+
+  }
+
+}
