@@ -7,6 +7,8 @@ body {
 
 }
 
+// Headings different than nav or name caption
+
 .heading {
   &__projects {
     font-family: "Press Start 2P";
@@ -16,6 +18,11 @@ body {
     text-shadow: .13em .13em 0 $color-secondary-dark-3;
     letter-spacing: .5rem;
     
+    &--2{
+      margin-bottom: 3rem;
+      margin-top: 7rem;
+      
+    }
 
     &--letter {
       transition: color .3s;
@@ -27,8 +34,15 @@ body {
 
   }
 
-
+&__resume{
+  font-size: 5rem;
+  font-weight: 800;
+  color: $color-secondary-dark;
+  display: inline-block;
 }
+}
+
+// Name caption - letters
 
 .about {
   &__container {
