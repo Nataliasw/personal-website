@@ -6,21 +6,23 @@
     border-radius: 3rem;
     padding: 4rem;
     overflow: hidden;
+    margin-bottom: 5rem;
 
     &-about {
 
       text-align: justify;
     }
-    &--resize{
+
+    &--resize {
       animation: resizable 1s ease-in;
     }
-   
+
   }
 
-  
+  // ------------------------------------------------------- Paragraph animation
 
   &__paragraph {
-    font-size: 2rem;
+    font-size: 1.6rem;
     color: $color-secondary-dark-3;
 
     &--appear {
@@ -38,6 +40,8 @@
       }
     }
   }
+
+  // ------------------------------------------------------ Arrow Button styling and functionality
 
   &__button {
     display: inline-block;
@@ -67,7 +71,133 @@
       transform: rotateZ(-360deg)
     }
 
+    // ----------------------------------------------------Skills part
+  }
+
+  &__skill {
+    &-list {
+      color: $color-secondary-dark;
+      font-size: $paragraph-font;
+      list-style: none;
+
+    }
+
+    &-bold {
+      font-weight: bold;
+
+    }
+
+    &-bold-1 {
+      font-weight: bold;
+      display: inline-block;
+      width: 7%;
+    }
+  }
+
+  //-------------------------------------------------------Education/certificate part
+
+  &__education {
+    color: $color-secondary-dark;
+    font-size: $paragraph-font;
+
+
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+
+    &-list {
+      list-style-type: none;
+
+    }
+
+    &-item {
+
+
+      margin-bottom: 2rem;
+
+    }
+  }
+
+  &__item {
+
+    &-bold {
+      font-weight: bold;
+      display: inline-block;
+      width: 50%;
+    }
+  }
+
+
+  // ---------------------------------------------------- Employment history part
+
+&__container{
+  &-top{
+    position: relative;
 
   }
+
+}
+
+&__button{
+  &-pdf{
+    position: absolute;
+    top: 5rem;
+    right:10rem;
+font-size: 1.6rem;
+color: $color-secondary-dark;
+background-color: $color-white;
+ font-family: "Press Start 2P";
+border-radius: 2rem;
+    padding: 2rem;
+    border: none;
+    box-shadow: 1rem 1rem 0 $color-secondary-dark;
+transition: all .3s;
+    &:hover{
+cursor: pointer;
+      transform: translateY(-1rem);
+      background-color: $color-secondary-light;
+      color: $color-primary;
+    }
+
+    &:active{
+      transform: translateY(1rem);
+    }
+  }
+
+}
+ 
+
+  &__expir {
+    color: $color-secondary-dark;
+    font-size: $paragraph-font;
+
+    &-container {
+      margin-top: 4rem;
+    }
+
+
+    &-title {
+      font-style: italic;
+      font-size: 2rem;
+      font-weight: normal;
+    }
+
+    &-bold {
+      font-weight: bold;
+      font-style: initial;
+    }
+
+    &-list {
+      margin-left: $paragraph-font;
+
+    }
+
+    &-span{
+      display: block;
+      text-align: center;
+    }
+  }
+
+
 
 }

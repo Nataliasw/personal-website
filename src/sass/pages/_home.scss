@@ -1,4 +1,14 @@
 .section {
+   &__about {
+
+    height: 90vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80%;
+    padding: 3rem;
+    
+  }
   &__projects {
     position: absolute;
     top: 0;
@@ -7,28 +17,49 @@
 padding: 3rem;
   }
 
-  &__about {
-
-    height: 90vh;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 80%;
-    padding: 3rem;
-    
-  }
+ 
 
   &__resume {
-
-    height: 90vh;
+    
     position: absolute;
     top: 0;
     right: 0;
     width: 80%;
     padding: 3rem;
+    margin-bottom: 60rem;
     
   }
 
+  &__contact{
+    position: absolute;
+    
+    right: 0;
+    width: 80%;
+    padding: 3rem;
+    padding-bottom: 10rem;
+  }
 
+  &__footer{
+    position: absolute;
+    
+    right: 0;
+    width: 80%;
+    padding: 3rem;
+    padding-bottom: 10rem;
+  }
 
+  
+}
+
+.footer {
+
+  &__container{
+    text-align: center;
+    position: relative;
+  }
+
+  &__text{
+    font-size: 1.3rem;
+
+  }
 }

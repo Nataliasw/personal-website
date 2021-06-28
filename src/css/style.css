@@ -1,3 +1,23 @@
+/*
+0 - 600px:    Phone
+600 - 900px:   Tablet portrait
+900 - 1340px:  Tablet landscape
+1340 - 1800px: Normal styles applies
+1800px +:      Big desktop
+
+$breakpoint argument choices:
+
+- phone
+- tab-port
+-tab-small
+- tab-land
+
+- big-desktop
+
+ORDER: base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
 *,
 *::after,
 *::before {
@@ -8,6 +28,21 @@
 
 html {
   font-size: 62.5%;
+}
+@media only screen and (max-width: 83.75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
 }
 
 body {
@@ -25,7 +60,14 @@ body {
 }
 .section--3 {
   position: relative;
-  height: 90vh;
+  height: 280vh;
+}
+.section--4 {
+  position: relative;
+  height: 100vh;
+}
+.section--5 {
+  position: relative;
 }
 
 ::selection {
@@ -98,6 +140,11 @@ body {
   color: #0C4271;
   display: inline-block;
 }
+.heading__resume-skill {
+  font-size: 3.5rem;
+  color: #0C4271;
+  margin-top: 2rem;
+}
 
 .about__container {
   position: relative;
@@ -156,6 +203,7 @@ body {
   transition: all 0.2s;
   position: relative;
   font-size: 1.6rem;
+  box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.5);
   border: none;
   cursor: pointer;
 }
@@ -228,6 +276,10 @@ body {
   transform: translateY(1rem);
 }
 
+.button__cert {
+  margin: 2rem;
+}
+
 .navigation {
   width: 20%;
   background-color: #0C4271;
@@ -238,14 +290,32 @@ body {
   left: 0;
   z-index: 150;
 }
+@media only screen and (max-width: 75em) {
+  .navigation {
+    width: 100%;
+    height: 25vh;
+    position: fixed;
+    text-align: initial;
+  }
+}
 .navigation__logo {
   width: 50%;
+}
+@media only screen and (max-width: 75em) {
+  .navigation__logo {
+    width: 5%;
+  }
 }
 .navigation__name {
   font-size: 2rem;
   text-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.3);
   transition: all 0.3s;
   font-family: "Press Start 2P";
+}
+@media only screen and (max-width: 75em) {
+  .navigation__name {
+    display: inline-block;
+  }
 }
 .navigation__name .jumpy {
   display: inline-block;
@@ -285,11 +355,25 @@ body {
 .navigation__list {
   margin-top: 15rem;
 }
+@media only screen and (max-width: 75em) {
+  .navigation__list {
+    display: inline;
+    float: right;
+    position: absolute;
+    top: -15rem;
+    right: 0;
+  }
+}
 .navigation__link {
   display: block;
   text-decoration: none;
   margin-bottom: 4rem;
   font-weight: 700;
+}
+@media only screen and (max-width: 75em) {
+  .navigation__link {
+    display: inline;
+  }
 }
 .navigation__link:link, .navigation__link:visited {
   color: #F9DFDC;
@@ -297,6 +381,11 @@ body {
   background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #F9DFDC 50%);
   background-size: 220%;
   transition: all 0.5s;
+}
+@media only screen and (max-width: 75em) {
+  .navigation__link:link, .navigation__link:visited {
+    color: #0A81AB;
+  }
 }
 .navigation__link:hover, .navigation__link:active {
   background-position: 100%;
@@ -436,6 +525,7 @@ span {
   border-radius: 3rem;
   padding: 4rem;
   overflow: hidden;
+  margin-bottom: 5rem;
 }
 .resume__container-about {
   text-align: justify;
@@ -444,7 +534,7 @@ span {
   animation: resizable 1s ease-in;
 }
 .resume__paragraph {
-  font-size: 2rem;
+  font-size: 1.6rem;
   color: #043a66;
 }
 .resume__paragraph--appear {
@@ -476,6 +566,151 @@ span {
 .resume__icon--down {
   transition: all 0.5s;
   transform: rotateZ(-360deg);
+}
+.resume__skill-list {
+  color: #0C4271;
+  font-size: 1.6rem;
+  list-style: none;
+}
+.resume__skill-bold {
+  font-weight: bold;
+}
+.resume__skill-bold-1 {
+  font-weight: bold;
+  display: inline-block;
+  width: 7%;
+}
+.resume__education {
+  color: #0C4271;
+  font-size: 1.6rem;
+}
+.resume__education:not(:last-child) {
+  margin-bottom: 4rem;
+}
+.resume__education-list {
+  list-style-type: none;
+}
+.resume__education-item {
+  margin-bottom: 2rem;
+}
+.resume__item-bold {
+  font-weight: bold;
+  display: inline-block;
+  width: 50%;
+}
+.resume__container-top {
+  position: relative;
+}
+.resume__button-pdf {
+  position: absolute;
+  top: 5rem;
+  right: 10rem;
+  font-size: 1.6rem;
+  color: #0C4271;
+  background-color: #fff;
+  font-family: "Press Start 2P";
+  border-radius: 2rem;
+  padding: 2rem;
+  border: none;
+  box-shadow: 1rem 1rem 0 #0C4271;
+  transition: all 0.3s;
+}
+.resume__button-pdf:hover {
+  cursor: pointer;
+  transform: translateY(-1rem);
+  background-color: #0A81AB;
+  color: #F9DFDC;
+}
+.resume__button-pdf:active {
+  transform: translateY(1rem);
+}
+.resume__expir {
+  color: #0C4271;
+  font-size: 1.6rem;
+}
+.resume__expir-container {
+  margin-top: 4rem;
+}
+.resume__expir-title {
+  font-style: italic;
+  font-size: 2rem;
+  font-weight: normal;
+}
+.resume__expir-bold {
+  font-weight: bold;
+  font-style: initial;
+}
+.resume__expir-list {
+  margin-left: 1.6rem;
+}
+.resume__expir-span {
+  display: block;
+  text-align: center;
+}
+
+.contact {
+  font-family: inherit;
+}
+.contact__container {
+  background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.8));
+  padding: 3rem;
+  border-radius: 2rem;
+}
+.contact__container-top {
+  position: relative;
+}
+.contact__input {
+  margin-bottom: 1rem;
+  padding: 1.6rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 10px;
+  font-family: inherit;
+}
+.contact__message {
+  position: relative;
+}
+.contact__button {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  font-family: "Press Start 2P";
+  padding: 2rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: #0C4271;
+  box-shadow: 1rem 1rem 0 rgba(0, 0, 0, 0.9);
+  color: #F9DFDC;
+  transition: all 0.5s;
+}
+.contact__button:hover {
+  background-color: #0A81AB;
+  transform: translate(-50%, -50%) translateY(-0.7rem);
+  box-shadow: 2rem 2rem 0 rgba(0, 0, 0, 0.5);
+  padding: 2.4rem;
+}
+.contact__button:active {
+  transform: translate(-50%, -50%) translateY(0.7rem);
+}
+.contact__image {
+  width: 10%;
+  position: absolute;
+  left: 90%;
+  transition: all 0.5s;
+}
+.contact__image:hover {
+  transform: rotateZ(-90deg) translate(-10rem, -3rem);
+  transform-origin: center;
+}
+.contact__icon {
+  position: absolute;
+  font-size: 5rem;
+  color: hotpink;
+  left: 93%;
+  top: 35%;
+  z-index: -1;
 }
 
 .row {
@@ -515,13 +750,6 @@ span {
   width: calc(3* ((100% - 3* 6rem) /4) + 2* 6rem);
 }
 
-.section__projects {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 80%;
-  padding: 3rem;
-}
 .section__about {
   height: 90vh;
   position: absolute;
@@ -530,13 +758,42 @@ span {
   width: 80%;
   padding: 3rem;
 }
-.section__resume {
-  height: 90vh;
+.section__projects {
   position: absolute;
   top: 0;
   right: 0;
   width: 80%;
   padding: 3rem;
+}
+.section__resume {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80%;
+  padding: 3rem;
+  margin-bottom: 60rem;
+}
+.section__contact {
+  position: absolute;
+  right: 0;
+  width: 80%;
+  padding: 3rem;
+  padding-bottom: 10rem;
+}
+.section__footer {
+  position: absolute;
+  right: 0;
+  width: 80%;
+  padding: 3rem;
+  padding-bottom: 10rem;
+}
+
+.footer__container {
+  text-align: center;
+  position: relative;
+}
+.footer__text {
+  font-size: 1.3rem;
 }
 
 /*# sourceMappingURL=style.css.map */

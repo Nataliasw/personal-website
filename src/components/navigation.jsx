@@ -21,12 +21,12 @@ const Navigation = () => {
           <span className="jumpy">.</span>
         </h1>
         <ul className="navigation__list">
-          <li><a href="#project" class="navigation__link"><span>01</span>Projects</a></li>
-          <li><a href="#resume" class="navigation__link"><span>02</span>Resume</a></li>
-          <li><a href="#contact" class="navigation__link"><span>03</span>Contact me</a></li>
+          <li><a href="#project" className="navigation__link"><span>01</span>Projects</a></li>
+          <li><a href="#resume" className="navigation__link"><span>02</span>Resume</a></li>
+          <li><a href="#contact" className="navigation__link"><span>03</span>Contact me</a></li>
         </ul>
-        <a href="#" class="navigation__icon" ><i class="fab fa-github-square navigation__icon--1"></i></a>
-        <a href="#" class="navigation__icon"><i class="fab fa-linkedin navigation__icon--2"></i></a>
+        <a href="#" className="navigation__icon" ><i className="fab fa-github-square navigation__icon--1"></i></a>
+        <a href="#" className="navigation__icon"><i className="fab fa-linkedin navigation__icon--2"></i></a>
 
       </nav>
     </div>

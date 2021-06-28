@@ -9,8 +9,32 @@
   left: 0;
   z-index: 150;
 
+  
+
+  @include respond(tab-land) {}
+
+  @include respond(tab-small) {
+    width: 100%;
+    height: 25vh;
+    position: fixed;
+text-align: initial;
+  }
+
+  @include respond(tab-port) {}
+
+  @include respond(phone) {}
+
+
+
+  @include respond(big-desktop) {}
+
+
   &__logo {
     width: 50%;
+
+    @include respond(tab-small) {
+      width: 5%;
+    }
   }
 
   &__name {
@@ -19,24 +43,38 @@
     transition: all .3s;
     font-family: "Press Start 2P";
 
+    @include respond(tab-small) {
+      display: inline-block;
+      
+    }
+
     .jumpy {
       display: inline-block;
-		text-shadow: .13em .13em 0 rgba($color-primary, .6);
-		animation: jump 600ms infinite ease-out alternate;
-    		@for $i from 0 to 10 {
-			&:nth-of-type(#{$i}){
-				animation-delay:600ms + 200ms * $i;
-			}
-		}
-	}
+      text-shadow: .13em .13em 0 rgba($color-primary, .6);
+      animation: jump 600ms infinite ease-out alternate;
 
-    
+      @for $i from 0 to 10 {
+        &:nth-of-type(#{$i}) {
+          animation-delay: 600ms + 200ms * $i;
+        }
+      }
+    }
+
+
 
 
   }
 
   &__list {
     margin-top: 15rem;
+
+     @include respond(tab-small) {
+      display: inline;
+      float: right;
+      position: absolute;
+      top: -15rem;
+      right: 0;
+    }
   }
 
   &__link {
@@ -45,6 +83,9 @@
     margin-bottom: 4rem;
     font-weight: 700;
 
+    @include respond(tab-small) {
+      display: inline;
+    }
 
     &:link,
     &:visited {
@@ -53,6 +94,10 @@
       background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-primary 50%);
       background-size: 220%;
       transition: all .5s;
+
+        @include respond(tab-small) {
+       color: $color-secondary-light;
+    }
     }
 
     &:hover,

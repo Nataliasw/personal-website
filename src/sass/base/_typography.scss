@@ -39,6 +39,12 @@ body {
   font-weight: 800;
   color: $color-secondary-dark;
   display: inline-block;
+
+  &-skill{
+    font-size: 3.5rem;
+    color: $color-secondary-dark;
+margin-top: 2rem;
+  }
 }
 }
 

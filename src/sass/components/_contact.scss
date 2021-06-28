@@ -1,0 +1,75 @@
+.contact{
+font-family: inherit;
+  &__container{
+background-image: linear-gradient(to right bottom, rgba($color-white, 0.3), rgba($color-white, 0.8));
+padding: 3rem;
+border-radius: 2rem;
+&-top{
+position: relative;
+}
+  }
+
+
+ &__input{
+   margin-bottom: 1rem;
+   padding: 1.6rem;
+   background-color: rgba($color-white, .9);
+   border: none;
+   border-radius: 10px;
+   font-family: inherit;
+ }
+
+ &__message{
+   position: relative;
+ }
+ &__button {
+   display: inline-block;
+   position: absolute;
+   top: 50%;
+   left: 75%;
+   transform: translate(-50%, -50%);
+   font-family: "Press Start 2P";
+   padding: 2rem;
+   border-radius: 1rem;
+   border: none;
+   background-color: $color-secondary-dark;
+   box-shadow: 1rem 1rem 0 rgba($color-black, 0.9);
+   color: $color-primary;
+   transition: all .5s;
+
+   &:hover{
+     background-color: $color-secondary-light;
+     transform: translate(-50%, -50%) translateY(-.7rem);
+box-shadow:2rem 2rem 0 rgba($color-black, 0.5);
+padding: 2.4rem;
+   }
+
+   &:active {
+     transform: translate(-50%, -50%) translateY(.7rem);
+   }
+
+ }
+
+ &__image{
+   width: 10%;
+   position: absolute;
+   left: 90%;
+   transition: all .5s;
+
+   &:hover{
+     transform: rotateZ(-90deg) translate(-10rem, -3rem);
+transform-origin: center;
+   }
+ }
+
+ &__icon {
+   position: absolute;
+   font-size: 5rem;
+   color: hotpink;
+   left: 93%;
+   top: 35%;
+   z-index: -1;
+ }
+
+
+}

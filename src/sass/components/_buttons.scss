@@ -11,7 +11,7 @@
     transition: all .2s;
     position: relative;
     font-size: 1.6rem;
-
+box-shadow: 0rem 1rem 1rem rgba($color-black, 0.5);
 
     //change for the button element
     border: none;
@@ -110,5 +110,11 @@
       }
     }
 
+  }
+}
+
+.button {
+  &__cert{
+    margin: 2rem;
   }
 }

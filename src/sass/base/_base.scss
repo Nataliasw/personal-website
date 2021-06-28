@@ -9,6 +9,20 @@
 
 html {
   font-size: 62.5%; //1rem = 10px
+@include respond(tab-land) {
+    font-size: 56.25%; //1rem = 9px
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; //1rem = 8px
+  }
+
+
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem = 12px
+  }
+
+
 
 }
 
@@ -29,9 +43,20 @@ body {
     position: relative;
     height: 90vh;
   }
-   &--3 {
+
+  &--3 {
     position: relative;
-    height: 90vh;
+    height: 280vh;
+  }
+
+  &--4 {
+    position: relative;
+height: 100vh;
+  }
+
+  &--5 {
+    position: relative;
+
   }
 }
 
