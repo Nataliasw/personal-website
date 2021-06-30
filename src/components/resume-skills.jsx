@@ -45,8 +45,8 @@ const Skills = () => {
 
         <h4 className="heading__resume-skill">Languages</h4>
         <ul className="resume__skill-list">
-          <li className="resume__skill-item"><span className="resume__skill-bold-1">English</span> - B2/C1</li>
-          <li className="resume__skill-item"><span className="resume__skill-bold-1">German</span> - A2/B1 </li>
+          <li className="resume__skill-item"><span className="resume__skill-bold-1">English</span> - C1</li>
+          <li className="resume__skill-item"><span className="resume__skill-bold-1">German</span> - B1 </li>
         </ul>
       </div>}
     </div>

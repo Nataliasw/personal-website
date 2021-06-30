@@ -26,13 +26,12 @@
   },
   "scripts": {
     "watch:sass": "sass --watch src/sass/main.scss src/css/style.css",
-    "devserver": "live-server",
-    "start": "npm-run-all --parallel devserver watch:sass",
     "compile:sass": "sass src/sass/main.scss src/css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' src/css/style.comp.css -o src/css/style.prefix.css",
     "compress:css": "sass --style=compressed src/css/style.prefix.css src/css/style.css",
     "build:css": "npm-run-all compile:sass prefix:css compress:css",
     "build": "react-scripts build",
+    "start": "react-scripts start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },

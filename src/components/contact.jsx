@@ -1,5 +1,6 @@
 import React from "react";
 import emailjs from "emailjs-com";
+import sample from "../images/envelope.png";
 
 const Contact = () => {
 
@@ -37,7 +38,7 @@ const Contact = () => {
         <form onSubmit={sendEmail} className="contact__form">
           <div className="contact__container-top">
             <input type="text" className="contact__input " placeholder="Name" name="name" required={true}></input>
-            <img src="../images/envelope.png" className="contact__image" alt="evelope doodle"></img>
+            <img src={sample} className="contact__image" alt="evelope doodle"></img>
             <i className="fab fa-earlybirds contact__icon"></i>
           </div>
           <div>

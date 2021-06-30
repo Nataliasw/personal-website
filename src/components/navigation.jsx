@@ -1,6 +1,6 @@
 import React from "react";
 import "../css/style.css";
-
+import sample from "../images/computer.png";
 
 const Navigation = () => {
   return (
@@ -8,7 +8,7 @@ const Navigation = () => {
 
       <nav className="navigation__nav">
 
-        <img src="images/computer.png" alt="computer logo" className="navigation__logo"></img>
+        <img src={sample} alt="computer logo" className="navigation__logo"></img>
         <h1 className="navigation__name">
           <span className="jumpy">N</span>
           <span className="jumpy">a</span>
