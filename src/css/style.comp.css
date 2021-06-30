@@ -755,6 +755,12 @@ span {
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }
+@media only screen and (max-width: 83.75em) {
+  .card__picture {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 0 70%);
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 70%);
+  }
+}
 @media only screen and (max-width: 37.5em) {
   .card__picture {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 60%, 0 70%);
@@ -762,8 +768,9 @@ span {
   }
 }
 .card__picture--1 {
-  background-size: 35rem;
-  background-image: linear-gradient(to right bottom, #0A81AB, #0C4271), url(../images/project-card-1.png);
+  background-size: 50rem;
+  background-position: left;
+  background-image: linear-gradient(to right bottom, #0A81AB, #0C4271), url(../images/project-card-1st.png);
 }
 @media only screen and (max-width: 83.75em) {
   .card__picture--1 {
@@ -828,6 +835,7 @@ span {
 }
 @media only screen and (max-width: 75em) {
   .card__details {
+    font-size: 2rem;
     left: 50%;
     transform: translate(-50%);
   }

@@ -28,6 +28,7 @@
     box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
  border-radius: 3px;
 
+
   
 
     @include respond(phone){
@@ -42,6 +43,7 @@
 
       @include respond(tab-small){
         border-radius: 3px 3px 0 0;
+        
       }
 
       @include respond(phone){
@@ -99,6 +101,7 @@
 }
   }
 
+
   &__picture {
     height: 100%;
     background-size: cover;
@@ -108,6 +111,11 @@
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
 
+    @include respond(tab-land){
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 0 70%);
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 70%);
+    }
+
 @include respond(phone){
    -webkit-clip-path: polygon(0 0, 100% 0, 100% 60%, 0 70%);
     clip-path: polygon(0 0, 100% 0, 100% 60%, 0 70%);
@@ -115,8 +123,9 @@
 
 
     &--1 {
-      background-size: 35rem;
-      background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(../images/project-card-1.png);
+      background-size: 50rem;
+      background-position: left;
+      background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(../images/project-card-1st.png);
 
       @include respond(tab-land){
         background-size: cover;
@@ -192,6 +201,7 @@
     padding: 1rem;
 
     @include respond(tab-small){
+      font-size: 2rem;
       left: 50%;
       transform: translate(-50%);
     }
