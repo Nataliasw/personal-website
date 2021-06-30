@@ -11,7 +11,7 @@
     transition: all .2s;
     position: relative;
     font-size: 1.6rem;
-box-shadow: 0rem 1rem 1rem rgba($color-black, 0.5);
+    box-shadow: 0rem 1rem 1rem rgba($color-black, 0.5);
 
     //change for the button element
     border: none;
@@ -61,6 +61,8 @@ box-shadow: 0rem 1rem 1rem rgba($color-black, 0.5);
   }
 }
 
+// ----------------------------------------- Arrows in section with name
+
 .about {
 
   &__icon {
@@ -68,16 +70,48 @@ box-shadow: 0rem 1rem 1rem rgba($color-black, 0.5);
     text-shadow: .3rem .3rem 0 rgba($color-grey-1, 0.6);
     animation: jump--2 500ms infinite ease-out alternate;
 
+
+
+    @include respond(tab-small) {
+      font-size: 9rem;
+
+    }
+
+
+
+
     &--1 {
       position: absolute;
       top: 7%;
       right: 7%;
+
+      @include respond(tab-small) {
+        top: 3%;
+        right: 7%;
+      }
+
+      @include respond(tab-port) {
+        right: 11%;
+      }
+
+      @include respond(phone) {
+        top: 80%;
+        right: 11%;
+
+      }
+
     }
 
     &--2 {
       position: absolute;
       top: 100%;
-      right: 10.5%;
+      right: 1%;
+
+      @include respond(phone) {
+        top: 120%;
+        right: 80%;
+
+      }
     }
 
   }
@@ -114,7 +148,7 @@ box-shadow: 0rem 1rem 1rem rgba($color-black, 0.5);
 }
 
 .button {
-  &__cert{
+  &__cert {
     margin: 2rem;
   }
 }

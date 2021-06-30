@@ -14,7 +14,7 @@ const About = () => {
         <span className="about__name">a</span>
         <span className="about__name">&nbsp;</span>
         <span className="about__name">S</span>
-        <span className="about__name">.</span>
+        <span className="about__name about__disapear">.</span>
         <a href="#project" className="about__button" onClick="return false">Scroll down &darr;</a>
         <i className="fas fa-angle-double-down about__icon about__icon--2"></i>
       </div>

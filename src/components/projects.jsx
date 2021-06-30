@@ -82,6 +82,9 @@ const Projects = () => {
         </div>
 
       </div>
+      <div className="card__icon-container">
+        <p className="card__icon-paragraph">See all projects at</p> <a href="https://github.com/Nataliasw/" className="card__icon-link" target="_blank" ><i className="fab fa-github-square card__icon-github"></i></a>
+      </div>
     </div>
   )
 

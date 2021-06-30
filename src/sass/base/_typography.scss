@@ -7,7 +7,7 @@ body {
 
 }
 
-// Headings different than nav or name caption
+// ---------------------------------Headings different than nav or name caption
 
 .heading {
   &__projects {
@@ -15,17 +15,47 @@ body {
     font-size: 8rem;
     margin-bottom: 3rem;
     margin-left: 1.5rem;
-    text-shadow: .13em .13em 0 $color-secondary-dark-3;
+    text-shadow: .13em .13em 0 rgba($color-white, .5);
+    color: $color-secondary-dark-3;
     letter-spacing: .5rem;
-    
-    &--2{
+
+    @include respond(tab-land) {
+      font-size: 6rem;
+      margin-bottom: 2rem;
+    }
+
+    @include respond(tab-small) {
+      font-size: 5.5rem;
+      margin-bottom: 2rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 4rem;
+      margin-bottom: 2rem;
+    }
+
+    @include respond(phone) {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    &--2 {
       margin-bottom: 3rem;
       margin-top: 7rem;
-      
+
+      @include respond(tab-small) {
+        margin-bottom: 15rem;
+      }
+
+
+      @include respond(phone) {
+        margin-bottom: 15rem;
+      }
     }
 
     &--letter {
       transition: color .3s;
+
       &:hover {
         color: hotpink;
         cursor: pointer;
@@ -34,21 +64,30 @@ body {
 
   }
 
-&__resume{
-  font-size: 5rem;
-  font-weight: 800;
-  color: $color-secondary-dark;
-  display: inline-block;
-
-  &-skill{
-    font-size: 3.5rem;
+  &__resume {
+    font-size: 5rem;
+    font-weight: 800;
     color: $color-secondary-dark;
-margin-top: 2rem;
+    display: inline-block;
+
+    @include respond(phone) {
+      font-size: 3rem;
+    }
+
+    &-skill {
+      font-size: 3.5rem;
+      color: $color-secondary-dark;
+      margin-top: 2rem;
+
+      @include respond(phone) {
+        font-size: 2.5rem;
+
+      }
+    }
   }
 }
-}
 
-// Name caption - letters
+// -------------------------------------Name caption - letters
 
 .about {
   &__container {
@@ -57,6 +96,46 @@ margin-top: 2rem;
     left: 6%;
     font-size: 8rem;
     font-family: "Press Start 2P";
+    width: 90%;
+
+    @include respond(tab-land) {
+      font-size: 6rem;
+      margin-bottom: 2rem;
+    }
+
+    @include respond(tab-small) {
+      font-size: 7rem;
+
+    }
+
+    @include respond(tab-port) {
+      font-size: 7rem;
+      top: 15%;
+      left: 2%;
+    }
+
+    @include respond(phone) {
+      font-size: 4rem;
+      text-align: center;
+      left: 50%;
+      transform: translate(-50%);
+    }
+
+
+  }
+
+  &__disapear {
+
+    @include respond(tab-small) {
+      opacity: 0;
+    }
+    @include respond(tab-port) {
+      opacity: 0;
+    }
+
+    @include respond(phone) {
+      opacity: 1;
+    }
   }
 
   &__name {
@@ -64,7 +143,8 @@ margin-top: 2rem;
     color: $color-secondary-dark-3;
     text-shadow: .13em .13em 0 rgba($color-white, 0.6);
     // animation: jump--2 500ms infinite ease-out alternate;
-transition: all .3s;
+    transition: all .3s;
+
     &:hover {
       color: $color-secondary-light;
       cursor: pointer;

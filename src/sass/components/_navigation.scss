@@ -9,44 +9,59 @@
   left: 0;
   z-index: 150;
 
-  
 
-  @include respond(tab-land) {}
 
-  @include respond(tab-small) {
+  @include respond(tab-port) {
     width: 100%;
-    height: 25vh;
+    height: auto;
     position: fixed;
-text-align: initial;
+    text-align: initial;
   }
 
-  @include respond(tab-port) {}
+  ;
 
-  @include respond(phone) {}
-
-
-
-  @include respond(big-desktop) {}
+&__disapear{
+  @include respond(tab-small){
+    opacity: 0;
+  }
+}
 
 
   &__logo {
     width: 50%;
 
-    @include respond(tab-small) {
+    @include respond(tab-port) {
       width: 5%;
+      display: none;
     }
   }
 
   &__name {
     font-size: 2rem;
+
     text-shadow: 0 1.5rem 3rem rgba($color-black, 0.3);
     transition: all .3s;
     font-family: "Press Start 2P";
 
     @include respond(tab-small) {
+      font-size: 1.6rem;
+     
+    }
+
+    
+
+    @include respond(tab-port) {
       display: inline-block;
+      margin: 2rem 0 0 1rem;
       
     }
+
+    @include respond(phone){
+ position:relative;
+      left: 50%;
+      transform: translate(-50%);
+    }
+
 
     .jumpy {
       display: inline-block;
@@ -68,12 +83,48 @@ text-align: initial;
   &__list {
     margin-top: 15rem;
 
-     @include respond(tab-small) {
-      display: inline;
-      float: right;
-      position: absolute;
-      top: -15rem;
-      right: 0;
+    @include respond(tab-small) {
+      margin-top: 10rem;
+
+    }
+
+    @include respond(tab-port) {
+      display: inline-block;
+      margin-top: 0;
+
+    }
+
+    @include respond(phone) {
+      text-align: center;
+position: relative;
+left: 50%;
+transform: translate(-50%);
+    }
+
+    
+
+    &-item {
+      @include respond(tab-port) {
+        display: inline-block;
+
+
+        &:not(:last-child) {
+          margin-right: 3rem;
+        }
+
+        &:first-child {
+          margin-left: 7rem;
+        }
+      }
+
+      @include respond(phone){
+ &:first-child {
+          margin-left: 1rem;
+        }
+        &:not(:last-child) {
+          margin-right: 2rem;
+        }
+    }
     }
   }
 
@@ -84,7 +135,7 @@ text-align: initial;
     font-weight: 700;
 
     @include respond(tab-small) {
-      display: inline;
+      margin-bottom: 2rem;
     }
 
     &:link,
@@ -92,12 +143,13 @@ text-align: initial;
       color: $color-primary;
       font-size: 3rem;
       background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-primary 50%);
+
       background-size: 220%;
       transition: all .5s;
-
-        @include respond(tab-small) {
-       color: $color-secondary-light;
+@include respond(tab-small) {
+      font-size: 2rem;
     }
+
     }
 
     &:hover,
@@ -110,6 +162,22 @@ text-align: initial;
   }
 
   &__icon {
+
+    &-container {
+
+      @include respond(tab-port) {
+        display: inline-block;
+        margin-left: 4rem;
+
+      }
+
+      @include respond(phone){
+        display: none;
+      }
+
+      
+
+    }
 
     display: inline-block;
     text-decoration: none;
@@ -128,6 +196,12 @@ text-align: initial;
       margin-left: 2rem;
       margin-top: 6rem;
       box-shadow: 0 1.5rem 3rem rgba($color-black, 0.6);
+
+      @include respond(tab-port) {
+        margin-top: 0;
+        font-size: 2.5rem;
+        margin-left: 1rem;
+      }
     }
   }
 }

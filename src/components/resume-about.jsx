@@ -10,6 +10,7 @@ const About = () => {
     })
   };
 
+
   return (
     <div className={click ? "resume__container--resize resume__container resume__container-about" : "resume__container resume__container-about"}>
       <div>

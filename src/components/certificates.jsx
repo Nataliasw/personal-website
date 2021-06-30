@@ -59,7 +59,7 @@ const Certificate = () => {
 
     <div className={click ? "resume__container--resize resume__container resume__container-about" : "resume__container resume__container-about"}>
       <div>
-        <h3 className="heading__resume">Education/Certificates</h3>
+        <h3 className="heading__resume">Education/ Certificates</h3>
         <button className="resume__button" onClick={handleClick}><i className={click ? "resume__icon--up fas fa-angle-double-down" : "resume__icon--down fas fa-angle-double-down"}
         ></i></button>
       </div>

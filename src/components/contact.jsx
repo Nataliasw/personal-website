@@ -21,7 +21,7 @@ const Contact = () => {
 
   return (
     <div className="section__contact" id="contact">
-      <h2 className="heading__projects heading__projects--2">
+      <h2 className="heading__projects  heading__projects--3">
         <span className="heading__projects--letter">C</span>
         <span className="heading__projects--letter">o</span>
         <span className="heading__projects--letter">n</span>
@@ -48,7 +48,7 @@ const Contact = () => {
           </div>
           <div className="contact__message">
 
-            <textarea className="contact__input " cols="70" rows="8" placeholder="Your message" name="message" required={true}></textarea>
+            <textarea className="contact__input " cols="30" rows="8" placeholder="Your message" name="message" required={true}></textarea>
             <input type="submit" className="contact__button social__btn" value="&raquo; Send message &laquo;" onClick="return false"></input>
           </div>
           <div>

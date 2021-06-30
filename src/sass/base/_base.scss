@@ -17,6 +17,10 @@ html {
     font-size: 50%; //1rem = 8px
   }
 
+  @include respond(phone) {
+    font-size: 45%; 
+  }
+
 
   @include respond(big-desktop) {
     font-size: 75%; //1rem = 12px
@@ -41,17 +45,42 @@ body {
 
   &--2 {
     position: relative;
-    height: 90vh;
+    height: 110vh;
+
+    @include respond(tab-small){
+      height: 280vh;
+    }
+
+    @include respond(phone){
+      height: 250vh;
+    }
   }
 
   &--3 {
     position: relative;
     height: 280vh;
+
+      @include respond(tab-small){
+      height: 190vh;
+    }
+
+    @include respond(phone){
+      height: 300vh;
+    }
   }
 
   &--4 {
     position: relative;
 height: 100vh;
+z-index: 1;
+
+ @include respond(tab-small){
+      height: 70vh;
+    }
+
+    @include respond(phone){
+      height: 80vh;
+    }
   }
 
   &--5 {

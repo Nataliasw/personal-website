@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-import sample from "../pdf/certificate.pdf";
+import sample from "../pdf/Natalia_Swiercz_CV-eng.pdf";
 // Import the main component
 import { Viewer } from '@react-pdf-viewer/core';
 // Plugins
@@ -12,6 +12,7 @@ import '@react-pdf-viewer/default-layout/lib/styles/index.css';
 import { Worker } from '@react-pdf-viewer/core';
 
 
+
 //Parts of resume components
 import About from "./resume-about";
 import Skills from "./resume-skills";
@@ -19,21 +20,35 @@ import Certificate from "./certificates";
 import Expirience from "./resume-expir";
 
 
+//Aos
+import Aos from "aos";
+import "aos/dist/aos.css";
+
+
+
 const Resume = () => {
+
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+
+  }, []);
+
+
+
+
 
   const [defaultPdf] = useState(sample);
   const [toggle, setToggle] = useState(false);
-
-
-
-
   const defaultLayoutPluginInstance = defaultLayoutPlugin();
+
 
   const handleToggle = () => {
     setToggle(prevValue => {
       return !prevValue
     })
   };
+
+
 
 
   return (
@@ -62,6 +77,8 @@ const Resume = () => {
       <Skills></Skills>
       <Certificate></Certificate>
       <Expirience></Expirience>
+
+
       {/* Pdf button toggle section
 
       <button onClick={handleToggle}>See the PDF</button>
