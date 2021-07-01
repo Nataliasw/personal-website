@@ -289,10 +289,15 @@ body {
 }
 @media only screen and (max-width: 37.5em) {
   .about__container {
-    font-size: 4rem;
+    font-size: 3.4rem;
     text-align: center;
     left: 50%;
     transform: translate(-50%);
+  }
+}
+@media only screen and (max-width: 23.5em) {
+  .about__container {
+    font-size: 2.8rem;
   }
 }
 @media only screen and (max-width: 75em) {
@@ -704,7 +709,15 @@ span {
   .card {
     perspective: initial;
     --moz-perspective: initial;
-    height: 60rem;
+    height: 65rem;
+    margin-bottom: 0;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .card {
+    perspective: initial;
+    --moz-perspective: initial;
+    height: 65rem;
     margin-bottom: 0;
   }
 }
@@ -728,12 +741,13 @@ span {
 @media only screen and (max-width: 46.875em) {
   .card__side {
     box-shadow: none;
+    height: 65rem;
   }
 }
 @media only screen and (max-width: 37.5em) {
   .card__side {
     width: 50%;
-    height: 60rem;
+    height: 65rem;
   }
 }
 .card__side--front {
