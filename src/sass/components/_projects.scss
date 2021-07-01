@@ -8,10 +8,17 @@
     margin-bottom: 25rem;
   }
 
+   @include respond(phone) {
+    perspective: initial;
+    --moz-perspective: initial;
+    height: 65rem;
+    margin-bottom: 0;
+  }
+
   @include respond(phone) {
     perspective: initial;
     --moz-perspective: initial;
-    height: 60rem;
+    height: 65rem;
     margin-bottom: 0;
   }
 
@@ -35,11 +42,14 @@
 
 @include respond(iphone-land) {
     box-shadow: none;
+    height: 65rem;
     }
+
+    
 
     @include respond(phone) {
       width: 50%;
-      height: 60rem;
+      height: 65rem;
 
     }
 
