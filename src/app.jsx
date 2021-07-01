@@ -32,5 +32,6 @@ const App = () => {
       </section>
     </div>
   )
+
 }
 export default App;

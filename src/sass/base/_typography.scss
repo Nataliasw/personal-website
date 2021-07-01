@@ -70,14 +70,21 @@ body {
     color: $color-secondary-dark;
     display: inline-block;
 
-    @include respond(phone) {
+     @include respond(iphone-land) {
       font-size: 3rem;
+    }
+
+
+    @include respond(phone) {
+      font-size: 2.1rem;
     }
 
     &-skill {
       font-size: 3.5rem;
       color: $color-secondary-dark;
       margin-top: 2rem;
+
+     
 
       @include respond(phone) {
         font-size: 2.5rem;
@@ -129,6 +136,7 @@ body {
     @include respond(tab-small) {
       opacity: 0;
     }
+
     @include respond(tab-port) {
       opacity: 0;
     }

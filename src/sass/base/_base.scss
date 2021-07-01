@@ -43,16 +43,20 @@ body {
     height: 100vh;
   }
 
+
   &--2 {
     position: relative;
     height: 110vh;
 
     @include respond(tab-small){
-      height: 280vh;
+      height: 300vh;
+    }
+    @include respond(iphone-land){
+      height: 600vh;
     }
 
     @include respond(phone){
-      height: 250vh;
+      height: 280vh;
     }
   }
 
@@ -61,7 +65,11 @@ body {
     height: 280vh;
 
       @include respond(tab-small){
-      height: 190vh;
+      height: 250vh;
+    }
+
+    @include respond(iphone-land){
+      height: 460vh;
     }
 
     @include respond(phone){
@@ -76,6 +84,10 @@ z-index: 1;
 
  @include respond(tab-small){
       height: 70vh;
+    }
+
+     @include respond(iphone-land){
+      height: 120vh;
     }
 
     @include respond(phone){

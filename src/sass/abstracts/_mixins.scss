@@ -16,13 +16,7 @@
 
 
 
-@media (prefers-reduced-motion: no-preference) {
-  .square {
-    animation-name: fade-up ;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-  }
-}
+
 
 
 //MEDIA QUERY MANAGER
@@ -37,8 +31,9 @@
 $breakpoint argument choices:
 
 - phone
+- iphone-land
 - tab-port
--tab-small
+- tab-small
 - tab-land
 
 - big-desktop
@@ -53,6 +48,16 @@ ORDER: base + typography > general layout + grid > page layout > components
   @if $breakpoint==phone {
     @media only screen and (max-width: 37.5em) {
       //600px
+      @content
+    }
+
+  }
+
+  ;
+
+   @if $breakpoint==iphone-land {
+    @media only screen and (max-width: 46.875em) {
+      //750px
       @content
     }
 

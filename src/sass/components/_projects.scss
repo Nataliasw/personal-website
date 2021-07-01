@@ -4,16 +4,16 @@
   position: relative;
   height: 40rem;
 
-  @include respond(tab-small){
+  @include respond(tab-small) {
     margin-bottom: 25rem;
   }
 
-@include respond(phone){
-  perspective: initial;
-  --moz-perspective: initial;
-  height: 60rem;
-   margin-bottom: 0;
-}
+  @include respond(phone) {
+    perspective: initial;
+    --moz-perspective: initial;
+    height: 60rem;
+    margin-bottom: 0;
+  }
 
 
   &__side {
@@ -26,27 +26,33 @@
     backface-visibility: hidden;
     overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
- border-radius: 3px;
+    border-radius: 3px;
+
+    @include respond(tab-land) {
+    box-shadow: none;
+    }
 
 
-  
+@include respond(iphone-land) {
+    box-shadow: none;
+    }
 
-    @include respond(phone){
-  width: 50%;
-  height: 60rem;
-  
-}
-   
+    @include respond(phone) {
+      width: 50%;
+      height: 60rem;
+
+    }
+
 
     &--front {
       background-color: $color-white;
 
-      @include respond(tab-small){
+      @include respond(tab-small) {
         border-radius: 3px 3px 0 0;
-        
+
       }
 
-      @include respond(phone){
+      @include respond(phone) {
         border-right: 2px solid $color-white;
         border-radius: 3px 0 0 3px;
       }
@@ -54,33 +60,41 @@
 
     &--back {
       transform: rotateY(180deg);
-@include respond(tab-small){
-  transform: rotateY(0);
-  position: relative;
- height: 60%;
- top:100%;
- border-radius: 0 0 3px 3px;
-}
-    
-@include respond(phone){
-  transform: rotateY(0);
-  width: 50%;
-  position: relative;
-  left: 50%;
-  height: 100%;
-  top:0;
-  border-radius: 0 3px 3px 0;
-}
-  
+
+      @include respond(tab-small) {
+        transform: rotateY(0);
+        position: relative;
+        height: 60%;
+        top: 100%;
+        border-radius: 0 0 3px 3px;
+      }
+
+      @include respond(phone) {
+        transform: rotateY(0);
+        width: 50%;
+        position: relative;
+        left: 50%;
+        height: 100%;
+        top: 0;
+        border-radius: 0 3px 3px 0;
+      }
+
 
 
       &-1 {
         background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
-@include respond(tab-small){
-  
-  background-image: linear-gradient(to right bottom, rgba($color-secondary-light, 0.7), rgba($color-secondary-dark,0.7));
-}
+
+        @include respond(tab-land) {
+   background-image: linear-gradient(to right bottom, #FFFFFF, #FFFFFF);
+    }
+
         
+
+        @include respond(iphone-land) {
+
+          background-image: linear-gradient(to right bottom, #FFFFFF, #FFFFFF);
+        }
+
       }
 
 
@@ -89,16 +103,18 @@
 
   &:hover &__side--front {
     transform: rotateY(-180deg);
-@include respond(tab-small){
-  transform: rotateY(0) ;
-}
+
+    @include respond(tab-small) {
+      transform: rotateY(0);
+    }
   }
 
   &:hover &__side--back {
     transform: rotateY(0);
-@include respond(tab-small){
-  transform: rotateY(180);
-}
+
+    @include respond(tab-small) {
+      transform: rotateY(180);
+    }
   }
 
 
@@ -111,15 +127,15 @@
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
 
-    @include respond(tab-land){
+    @include respond(tab-land) {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 0 70%);
-    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 70%);
+      clip-path: polygon(0 0, 100% 0, 100% 70%, 0 70%);
     }
 
-@include respond(phone){
-   -webkit-clip-path: polygon(0 0, 100% 0, 100% 60%, 0 70%);
-    clip-path: polygon(0 0, 100% 0, 100% 60%, 0 70%);
-}
+    @include respond(phone) {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 60%, 0 70%);
+      clip-path: polygon(0 0, 100% 0, 100% 60%, 0 70%);
+    }
 
 
     &--1 {
@@ -127,7 +143,7 @@
       background-position: left;
       background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(../images/project-card-1st.png);
 
-      @include respond(tab-land){
+      @include respond(tab-land) {
         background-size: cover;
       }
 
@@ -136,15 +152,17 @@
     &--2 {
       background-size: 42rem;
       background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(../images/project-card-2nd.png);
- @include respond(tab-land){
+
+      @include respond(tab-land) {
         background-size: cover;
       }
     }
 
-     &--3 {
+    &--3 {
       background-size: 37rem;
       background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(../images/project-card-3.png);
-       @include respond(tab-land){
+
+      @include respond(tab-land) {
         background-size: cover;
       }
     }
@@ -170,7 +188,8 @@
       box-decoration-break: clone;
 
     }
-    &-span--2{
+
+    &-span--2 {
       display: block;
       font-size: 2rem;
       text-align: center;
@@ -187,7 +206,7 @@
       -webkit-box-decoration-break: clone;
       box-decoration-break: clone;
     }
-   
+
   }
 
   &__details {
@@ -200,15 +219,19 @@
     font-weight: 600;
     padding: 1rem;
 
-    @include respond(tab-small){
+    @include respond(tab-small) {
       font-size: 2rem;
       left: 50%;
       transform: translate(-50%);
     }
 
-    @include respond(phone){
+    @include respond(iphone-land) {
       top: 70%;
-      left:0;
+    }
+
+    @include respond(phone) {
+      top: 70%;
+      left: 0;
       transform: translate(0);
     }
   }
@@ -221,17 +244,24 @@
       display: block;
       font-size: 3.5rem;
 
-      @include respond(tab-small){
-      display: inline-block;
-      
-    }
+      @include respond(tab-land) {
+color: $color-secondary-dark;
+        }
 
-    @include respond(phone){
-     display: block;
-      font-size: 3.5rem;
-      text-align: center;
-    }
-      
+      @include respond(tab-small) {
+        display: inline-block;
+
+      }
+      @include respond(iphone-land) {
+color: $color-secondary-dark;
+        }
+
+      @include respond(phone) {
+        display: block;
+        font-size: 3.5rem;
+        text-align: center;
+      }
+
     }
   }
 
@@ -241,19 +271,20 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
- @include respond(tab-small){
+
+    @include respond(tab-small) {
       top: 0;
       left: 50%;
-      
+
       transform: translate(-50%, 0);
     }
 
-    @include respond(phone){
+    @include respond(phone) {
       top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
-    
+
   }
 
   &__button {
@@ -262,38 +293,39 @@
 
   }
 
-  &__icon{
-&-container{
-  text-align: center;
-  font-size: 3rem;
-  font-weight: 800;
-  color: $color-secondary-dark-3;
- 
-}
+  &__icon {
+    &-container {
+      text-align: center;
+      font-size: 3rem;
+      font-weight: 800;
+      color: $color-secondary-dark-3;
 
-&-link{
+    }
 
-  &:link,
-  &:visited{
-    color: $color-secondary-dark-3;
-  }
-}
+    &-link {
 
-&-paragraph{
-margin-right: 2rem;
+      &:link,
+      &:visited {
+        color: $color-secondary-dark-3;
+      }
+    }
 
-}
+    &-paragraph {
+      margin-right: 2rem;
 
-    &-github{
-font-size: 6rem;
-position: relative;
-top: 1rem;
- transition: all .3s;
-&:hover{
-  transform: translateY(-1rem);
-  color: $color-secondary-light;
+    }
 
-}
+    &-github {
+      font-size: 6rem;
+      position: relative;
+      top: 1rem;
+      transition: all .3s;
+
+      &:hover {
+        transform: translateY(-1rem);
+        color: $color-secondary-light;
+
+      }
     }
   }
 }

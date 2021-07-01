@@ -1,10 +1,3 @@
-@media (prefers-reduced-motion: no-preference) {
-  .square {
-    animation-name: fade-up;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-  }
-}
 /*
 0 - 600px:    Phone
 600 - 900px:   Tablet portrait
@@ -15,8 +8,9 @@
 $breakpoint argument choices:
 
 - phone
+- iphone-land
 - tab-port
--tab-small
+- tab-small
 - tab-land
 
 - big-desktop
@@ -72,12 +66,17 @@ body {
 }
 @media only screen and (max-width: 75em) {
   .section--2 {
-    height: 280vh;
+    height: 300vh;
+  }
+}
+@media only screen and (max-width: 46.875em) {
+  .section--2 {
+    height: 600vh;
   }
 }
 @media only screen and (max-width: 37.5em) {
   .section--2 {
-    height: 250vh;
+    height: 280vh;
   }
 }
 .section--3 {
@@ -86,7 +85,12 @@ body {
 }
 @media only screen and (max-width: 75em) {
   .section--3 {
-    height: 190vh;
+    height: 250vh;
+  }
+}
+@media only screen and (max-width: 46.875em) {
+  .section--3 {
+    height: 460vh;
   }
 }
 @media only screen and (max-width: 37.5em) {
@@ -102,6 +106,11 @@ body {
 @media only screen and (max-width: 75em) {
   .section--4 {
     height: 70vh;
+  }
+}
+@media only screen and (max-width: 46.875em) {
+  .section--4 {
+    height: 120vh;
   }
 }
 @media only screen and (max-width: 37.5em) {
@@ -231,9 +240,14 @@ body {
   color: #0C4271;
   display: inline-block;
 }
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 46.875em) {
   .heading__resume {
     font-size: 3rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .heading__resume {
+    font-size: 2.1rem;
   }
 }
 .heading__resume-skill {
@@ -367,8 +381,30 @@ body {
   background-color: #fff;
   color: #0C4271;
 }
+@media only screen and (max-width: 83.75em) {
+  .btn--white {
+    background-color: #0C4271;
+    color: #fff;
+  }
+}
+@media only screen and (max-width: 46.875em) {
+  .btn--white {
+    background-color: #0C4271;
+    color: #fff;
+  }
+}
 .btn--white::after {
   background-color: #fff;
+}
+@media only screen and (max-width: 83.75em) {
+  .btn--white::after {
+    background-color: #0C4271;
+  }
+}
+@media only screen and (max-width: 46.875em) {
+  .btn--white::after {
+    background-color: #0C4271;
+  }
 }
 .btn::after {
   content: "";
@@ -407,6 +443,11 @@ body {
 @media only screen and (max-width: 56.25em) {
   .about__icon--1 {
     right: 11%;
+  }
+}
+@media only screen and (max-width: 46.875em) {
+  .about__icon--1 {
+    top: 20%;
   }
 }
 @media only screen and (max-width: 37.5em) {
@@ -679,6 +720,16 @@ span {
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   border-radius: 3px;
 }
+@media only screen and (max-width: 83.75em) {
+  .card__side {
+    box-shadow: none;
+  }
+}
+@media only screen and (max-width: 46.875em) {
+  .card__side {
+    box-shadow: none;
+  }
+}
 @media only screen and (max-width: 37.5em) {
   .card__side {
     width: 50%;
@@ -725,9 +776,14 @@ span {
 .card__side--back-1 {
   background-image: linear-gradient(to right bottom, #0A81AB, #0C4271);
 }
-@media only screen and (max-width: 75em) {
+@media only screen and (max-width: 83.75em) {
   .card__side--back-1 {
-    background-image: linear-gradient(to right bottom, rgba(10, 129, 171, 0.7), rgba(12, 66, 113, 0.7));
+    background-image: linear-gradient(to right bottom, #FFFFFF, #FFFFFF);
+  }
+}
+@media only screen and (max-width: 46.875em) {
+  .card__side--back-1 {
+    background-image: linear-gradient(to right bottom, #FFFFFF, #FFFFFF);
   }
 }
 .card:hover .card__side--front {
@@ -840,6 +896,11 @@ span {
     transform: translate(-50%);
   }
 }
+@media only screen and (max-width: 46.875em) {
+  .card__details {
+    top: 70%;
+  }
+}
 @media only screen and (max-width: 37.5em) {
   .card__details {
     top: 70%;
@@ -854,9 +915,19 @@ span {
   display: block;
   font-size: 3.5rem;
 }
+@media only screen and (max-width: 83.75em) {
+  .card__link-heading {
+    color: #0C4271;
+  }
+}
 @media only screen and (max-width: 75em) {
   .card__link-heading {
     display: inline-block;
+  }
+}
+@media only screen and (max-width: 46.875em) {
+  .card__link-heading {
+    color: #0C4271;
   }
 }
 @media only screen and (max-width: 37.5em) {
@@ -1015,6 +1086,12 @@ span {
   .resume__button-pdf {
     top: 12rem;
     right: 45rem;
+  }
+}
+@media only screen and (max-width: 46.875em) {
+  .resume__button-pdf {
+    top: 8rem;
+    right: 50%;
   }
 }
 @media only screen and (max-width: 37.5em) {

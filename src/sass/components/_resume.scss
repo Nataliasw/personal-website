@@ -11,7 +11,7 @@
     //------------------------------------------ Get to know me container
 
     &-about {
-margin-top: 2rem;
+      margin-top: 2rem;
       text-align: justify;
     }
 
@@ -157,11 +157,18 @@ margin-top: 2rem;
       border: none;
       box-shadow: 1rem 1rem 0 $color-secondary-dark;
       transition: all .3s;
-      @include respond(tab-small){
+
+      @include respond(tab-small) {
         top: 12rem;
         right: 45rem;
       }
-      @include respond(phone){
+
+      @include respond(iphone-land) {
+        top: 8rem;
+        right: 50%;
+      }
+
+      @include respond(phone) {
         top: 8rem;
         right: 9rem;
       }
@@ -179,6 +186,7 @@ margin-top: 2rem;
     }
 
   }
+
   //---------------------------------------------------------Employment History part
 
 
@@ -215,17 +223,17 @@ margin-top: 2rem;
 
 
 
-&__animation{
- height: 100vh;
-overflow: hidden;
+  &__animation {
+    height: 100vh;
+    overflow: hidden;
 
- &-img{
-   width: 20rem;
-   height:20rem;
-   
+    &-img {
+      width: 20rem;
+      height: 20rem;
 
- }
-}
+
+    }
+  }
 
 
 
