@@ -77,6 +77,13 @@
 
     }
 
+    @include respond(phone) {
+      width: 25%;
+      left: 72%;
+      top: -25%;
+
+    }
+
     &:hover {
       transform: rotateZ(-90deg) translate(-10rem, -3rem);
       transform-origin: center;

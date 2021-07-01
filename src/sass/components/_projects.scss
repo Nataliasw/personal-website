@@ -43,6 +43,7 @@
 @include respond(iphone-land) {
     box-shadow: none;
     height: 65rem;
+    
     }
 
     
@@ -63,7 +64,7 @@
       }
 
       @include respond(phone) {
-        border-right: 2px solid $color-white;
+        
         border-radius: 3px 0 0 3px;
       }
     }
